@@ -64,14 +64,16 @@ function Pomodoro() {
   const [breakDuration, setBreakDuration] = useState(5);
 
   //Click handler function to increase duration
-  const handleDurationIncrease = (durationVariable, setDurationVariable) => {
+  /*const handleDurationIncrease = (durationVariable, setDurationVariable) => {
     setDurationVariable((currDurationValue) => currDurationValue + 1);
   };
   //Click handler function to decrease duration
   const handleDurationDecrease = (durationVariable, setDurationVariable) => {
-    setDurationVariable((currDurationValue) => currDurationValue - 1);
+    setDurationVariable(durationVariable - 1)
   };
-  // <button onClick={handleDurationDecrease({focusDuration},{setFocusDuration})}>
+  const handleDurationDecrease = (setVariableDuration) => {
+    setVariableDuration((currDuration) => currDuration - 1)
+  };*/
 
   /**
    * Custom hook that invokes the callback function every second
@@ -117,21 +119,17 @@ function Pomodoro() {
       <div className="row">
         <div className="col">
           <FocusDuration
-            isTimerRunning={isTimerRunning}
+            session={session}
             focusDuration={focusDuration}
             setFocusDuration={setFocusDuration}
-            handleDurationIncrease={handleDurationIncrease}
-            handleDurationDecrease={handleDurationDecrease}
           />
         </div>
         <div className="col">
           <div className="float-right">
             <BreakDuration
-              isTimerRunning={isTimerRunning}
+              session={session}
               breakDuration={breakDuration}
               setBreakDuration={setBreakDuration}
-              handleDurationIncrease={handleDurationIncrease}
-              handleDurationDecrease={handleDurationDecrease}
             />
           </div>
         </div>
