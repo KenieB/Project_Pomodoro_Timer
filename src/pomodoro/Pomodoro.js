@@ -63,18 +63,6 @@ function Pomodoro() {
   const [focusDuration, setFocusDuration] = useState(25);
   const [breakDuration, setBreakDuration] = useState(5);
 
-  //Click handler function to increase duration
-  /*const handleDurationIncrease = (durationVariable, setDurationVariable) => {
-    setDurationVariable((currDurationValue) => currDurationValue + 1);
-  };
-  //Click handler function to decrease duration
-  const handleDurationDecrease = (durationVariable, setDurationVariable) => {
-    setDurationVariable(durationVariable - 1)
-  };
-  const handleDurationDecrease = (setVariableDuration) => {
-    setVariableDuration((currDuration) => currDuration - 1)
-  };*/
-
   /**
    * Custom hook that invokes the callback function every second
    *
@@ -143,7 +131,9 @@ function Pomodoro() {
             session={session}
             setSession={setSession}
             focusDuration={focusDuration}
+            setFocusDuration={setFocusDuration}
             breakDuration={breakDuration}
+            setBreakDuration={setBreakDuration}
           />
         </div>
       </div>

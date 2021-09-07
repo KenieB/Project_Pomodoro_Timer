@@ -46,7 +46,7 @@ function FocusDuration({ session, focusDuration, setFocusDuration }) {
             type="button"
             className="btn btn-secondary"
             data-testid="decrease-focus"
-            disabled="true"
+            disabled={true}
           >
             <span className="oi oi-minus" />
           </button>
@@ -55,7 +55,7 @@ function FocusDuration({ session, focusDuration, setFocusDuration }) {
             type="button"
             className="btn btn-secondary"
             data-testid="increase-focus"
-            disabled="true"
+            disabled={true}
           >
             <span className="oi oi-plus" />
           </button>

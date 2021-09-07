@@ -46,7 +46,7 @@ function BreakDuration({ session, breakDuration, setBreakDuration }) {
               type="button"
               className="btn btn-secondary"
               data-testid="decrease-break"
-              disabled="true"
+              disabled={true}
             >
               <span className="oi oi-minus" />
             </button>
@@ -55,7 +55,7 @@ function BreakDuration({ session, breakDuration, setBreakDuration }) {
               type="button"
               className="btn btn-secondary"
               data-testid="increase-break"
-              disabled="true"
+              disabled={true}
             >
               <span className="oi oi-plus" />
             </button>
