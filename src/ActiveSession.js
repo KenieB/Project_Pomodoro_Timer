@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import classNames from "./utils/class-names";
 import useInterval from "./utils/useInterval";
 import { minutesToDuration, secondsToDuration } from "./utils/duration";
+import ProgressBar from "./ProgressBar";
 
 function ActiveSession({
   isTimerRunning,
@@ -26,24 +27,13 @@ function ActiveSession({
             {/* ---DONE--- TODO: Update message below correctly format the time remaining in the current session */}
             <p className="lead" data-testid="session-sub-title">
               {secondsToDuration(session?.timeRemaining)} remaining
-              {console.log(session?.timeRemaining)};
-              {console.log(session?.label)};
-              {console.log(focusDuration)};
+            
             </p>
           </div>
         </div>
         <div className="row mb-2">
           <div className="col">
-            <div className="progress" style={{ height: "20px" }}>
-              <div
-                className="progress-bar"
-                role="progressbar"
-                aria-valuemin="0"
-                aria-valuemax="100"
-                aria-valuenow="0" // TODO: Increase aria-valuenow as elapsed time increases
-                style={{ width: "0%" }} // TODO: Increase width % as elapsed time increases
-              />
-            </div>
+            <ProgressBar />
           </div>
         </div>
       </>

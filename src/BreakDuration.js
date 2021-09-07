@@ -17,7 +17,7 @@ function BreakDuration({ session, breakDuration, setBreakDuration }) {
             type="button"
             className="btn btn-secondary"
             data-testid="decrease-break"
-            onClick={() => setBreakDuration((currDuration) => currDuration - 1)}
+            onClick={() => setBreakDuration((currDuration) => Math.max((currDuration - 1), 1))}
           >
             <span className="oi oi-minus" />
           </button>
@@ -26,7 +26,7 @@ function BreakDuration({ session, breakDuration, setBreakDuration }) {
             type="button"
             className="btn btn-secondary"
             data-testid="increase-break"
-            onClick={() => setBreakDuration((currDuration) => currDuration + 1)}
+            onClick={() => setBreakDuration((currDuration) => Math.min((currDuration + 1), 15))}
           >
             <span className="oi oi-plus" />
           </button>
