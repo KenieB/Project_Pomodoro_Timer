@@ -14,8 +14,7 @@ function ActiveSession({
   breakDuration,
 }) {
   if (session) {
-   
-    return (
+      return (
       <>
         {/* ---DONE--- TODO: This area should show only when there is an active focus or break - i.e. the session is running or is paused */}
         <div className="row mb-2">
@@ -33,7 +32,7 @@ function ActiveSession({
         </div>
         <div className="row mb-2">
           <div className="col">
-            <ProgressBar />
+            <ProgressBar session={session} focusDuration={focusDuration} breakDuration={breakDuration} />
           </div>
         </div>
       </>
