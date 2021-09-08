@@ -130,20 +130,14 @@ function Pomodoro() {
             setIsTimerRunning={setIsTimerRunning}
             session={session}
             setSession={setSession}
-            focusDuration={focusDuration}
             setFocusDuration={setFocusDuration}
-            breakDuration={breakDuration}
             setBreakDuration={setBreakDuration}
           />
         </div>
       </div>
       <div>
         <ActiveSession
-          isTimerRunning={isTimerRunning}
-          useInterval={useInterval}
-          nextTick={nextTick}
-          session={session}
-          setSession={setSession}
+          session={session} 
           focusDuration={focusDuration}
           breakDuration={breakDuration}
         />

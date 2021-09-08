@@ -1,15 +1,9 @@
-import React, { useState } from "react";
-import classNames from "./utils/class-names";
-import useInterval from "./utils/useInterval";
+import React from "react";
 import { minutesToDuration, secondsToDuration } from "./utils/duration";
 import ProgressBar from "./ProgressBar";
 
 function ActiveSession({
-  isTimerRunning,
-  useInterval,
-  nextTick,
   session,
-  setSession,
   focusDuration,
   breakDuration,
 }) {

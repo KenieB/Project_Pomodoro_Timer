@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import classNames from "./utils/class-names";
-import useInterval from "./utils/useInterval";
 
 function SessionTimerControl({
   playPause,
@@ -8,9 +7,7 @@ function SessionTimerControl({
   setIsTimerRunning,
   session,
   setSession,
-  focusDuration,
   setFocusDuration,
-  breakDuration,
   setBreakDuration,
 }) {
   if (session) {
