@@ -15,7 +15,7 @@ function FocusDuration({ session, focusDuration, setFocusDuration }) {
             type="button"
             className="btn btn-secondary"
             data-testid="decrease-focus"
-            onClick={() => setFocusDuration((currDuration) => Math.max((currDuration - 1), 5))}
+            onClick={() => setFocusDuration((currDuration) => Math.max((currDuration - 5), 5))}
           >
             <span className="oi oi-minus" />
           </button>
@@ -24,7 +24,7 @@ function FocusDuration({ session, focusDuration, setFocusDuration }) {
             type="button"
             className="btn btn-secondary"
             data-testid="increase-focus"
-            onClick={() => setFocusDuration((currDuration) => Math.min((currDuration + 1), 60))}
+            onClick={() => setFocusDuration((currDuration) => Math.min((currDuration + 5), 60))}
           >
             <span className="oi oi-plus" />
           </button>

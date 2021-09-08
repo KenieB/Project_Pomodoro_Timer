@@ -2,8 +2,8 @@ import React from "react";
 
 function ProgressBar({ session, focusDuration, breakDuration }) {
   if (session?.label === "Focusing") {
-    let elapsedTime = focusDuration * 60 - session?.timeRemaining;
-    let percentElapedTime = (elapsedTime / (focusDuration * 60)) * 100;
+    let elapsedTime = focusDuration - (session?.timeRemaining / 60);
+    let percentElapedTime = (elapsedTime / focusDuration) * 100;
     return (
       <div className="progress" style={{ height: "20px" }}>
         <div
@@ -11,14 +11,14 @@ function ProgressBar({ session, focusDuration, breakDuration }) {
           role="progressbar"
           aria-valuemin="0"
           aria-valuemax="100"
-          aria-valuenow={elapsedTime} // TODO: Increase aria-valuenow as elapsed time increases
+          aria-valuenow={percentElapedTime} // TODO: Increase aria-valuenow as elapsed time increases
           style={{ width: `${percentElapedTime}%` }} // TODO: Increase width % as elapsed time increases
         />
       </div>
     );
   } else {
-    let elapsedTime = breakDuration * 60 - session?.timeRemaining;
-    let percentElapedTime = (elapsedTime / (breakDuration * 60)) * 100;
+    let elapsedTime = breakDuration - (session?.timeRemaining / 60);
+    let percentElapedTime = (elapsedTime / breakDuration) * 100;
     return (
       <div className="progress" style={{ height: "20px" }}>
         <div
@@ -26,7 +26,7 @@ function ProgressBar({ session, focusDuration, breakDuration }) {
           role="progressbar"
           aria-valuemin="0"
           aria-valuemax="100"
-          aria-valuenow={elapsedTime} // TODO: Increase aria-valuenow as elapsed time increases
+          aria-valuenow={percentElapedTime} // TODO: Increase aria-valuenow as elapsed time increases
           style={{ width: `${percentElapedTime}%` }} // TODO: Increase width % as elapsed time increases
         />
       </div>
