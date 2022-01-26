@@ -18,4 +18,4 @@
 2. Use `npm start` to run the application. 
 
 ---
-*\[ App created with reference to Thinkful-owned API as found in /src/utils directory of this project. \]*
+*\[ App created with reference to Thinkful-owned API as found in /src/utils directory of this repository. \]*
