@@ -6,7 +6,7 @@
 > ### Built with:
 > #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; JavaScript &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; React &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HTML/CSS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bootstrap <br>&nbsp;
 > 
-> ![Pomodoro_Timer_app](https://user-images.githubusercontent.com/55366157/141707364-b00ece4d-f346-4d72-bcf2-8767c42c9510.jpg) <br>
+> ![Pomodoro Timer app preview](https://user-images.githubusercontent.com/55366157/141707364-b00ece4d-f346-4d72-bcf2-8767c42c9510.jpg) <br>
 > &nbsp;&nbsp;&nbsp; ***Preview: Pomodoro Timer App***
 > <br>&nbsp;
 
